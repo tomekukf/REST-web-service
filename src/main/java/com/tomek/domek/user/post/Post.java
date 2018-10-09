@@ -4,13 +4,13 @@ import java.util.Date;
 
 public class Post {
 
-	private int id;
+	private Integer id;
 	private String text;
 	private Date creationTime;
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getText() {
@@ -29,7 +29,7 @@ public class Post {
 	public String toString() {
 		return String.format("Post [id=%s, text=%s, creationTime=%s]", id, text, creationTime);
 	}
-	public Post(int id, String text, Date creationTime) {
+	public Post(Integer id, String text, Date creationTime) {
 		super();
 		this.id = id;
 		this.text = text;
@@ -37,9 +37,11 @@ public class Post {
 	}
 	public Post() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
 	
 	
 	
+	 
 	
 }

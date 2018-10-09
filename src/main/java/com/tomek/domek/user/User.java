@@ -1,6 +1,9 @@
 package com.tomek.domek.user;
 
 import java.util.Date;
+import java.util.List;
+
+import com.tomek.domek.user.post.Post;
 
 public class User {
 	
@@ -9,6 +12,31 @@ public class User {
 	private String name;
 	
 	private Date birthDate;
+	
+	private List<Post> postList;
+	
+	
+
+	@Override
+	public String toString() {
+		return String.format("User [id=%s, name=%s, birthDate=%s, postList=%s]", id, name, birthDate, postList);
+	}
+
+	public User(Integer id, String name, Date birthDate, List<Post> postList) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.birthDate = birthDate;
+		this.postList = postList;
+	}
+
+	public List<Post> getPostList() {
+		return postList;
+	}
+
+	public void setPostList(List<Post> postList) {
+		this.postList = postList;
+	}
 
 	public Integer getId() {
 		return id;
@@ -34,17 +62,6 @@ public class User {
 		this.birthDate = birthDate;
 	}
 
-	@Override
-	public String toString() {
-		return String.format("User [id=%s, name=%s, birthDate=%s]", id, name, birthDate);
-	}
-
-	public User(Integer id, String name, Date birthDate) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.birthDate = birthDate;
-	}
 
 	public User() {
 		super();
